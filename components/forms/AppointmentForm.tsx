@@ -8,7 +8,6 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 import { SelectItem } from "@/components/ui/select";
-import { Doctors } from "@/constants";
 import {
   createAppointment,
   updateAppointment,
@@ -38,6 +37,7 @@ export const AppointmentForm = ({
   setOpen?: Dispatch<SetStateAction<boolean>>;
 }) => {
   const router = useRouter();
+  const doctorData = doctors?.documents;
   const [isLoading, setIsLoading] = useState(false);
 
   const AppointmentFormValidation = getAppointmentSchema(type);
@@ -153,7 +153,7 @@ export const AppointmentForm = ({
               name="primaryPhysician"
               label="Doctor"
               placeholder="Select a doctor">
-              {doctors.documents.map((doctor, i) => (
+              {doctorData?.map((doctor, i) => (
                 <SelectItem
                   key={doctor.fullName + i}
                   value={doctor.fullName}>
