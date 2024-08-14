@@ -66,8 +66,10 @@ export const PasskeyModal = () => {
   };
 
   return (
-    <AlertDialog open={open} onOpenChange={setOpen}>
-      <AlertDialogContent className="shad-alert-dialog">
+    <AlertDialog
+      open={open}
+      onOpenChange={setOpen}>
+      <AlertDialogContent className="shad-alert-dialog sm:w-4/5">
         <AlertDialogHeader>
           <AlertDialogTitle className="flex items-start justify-between">
             Admin Access Verification
@@ -88,15 +90,32 @@ export const PasskeyModal = () => {
           <InputOTP
             maxLength={6}
             value={passkey}
-            onChange={(value) => setPasskey(value)}
-          >
+            onChange={(value) => setPasskey(value)}>
             <InputOTPGroup className="shad-otp">
-              <InputOTPSlot className="shad-otp-slot" index={0} />
-              <InputOTPSlot className="shad-otp-slot" index={1} />
-              <InputOTPSlot className="shad-otp-slot" index={2} />
-              <InputOTPSlot className="shad-otp-slot" index={3} />
-              <InputOTPSlot className="shad-otp-slot" index={4} />
-              <InputOTPSlot className="shad-otp-slot" index={5} />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={0}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={1}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={2}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={3}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={4}
+              />
+              <InputOTPSlot
+                className="shad-otp-slot"
+                index={5}
+              />
             </InputOTPGroup>
           </InputOTP>
 
@@ -109,8 +128,7 @@ export const PasskeyModal = () => {
         <AlertDialogFooter>
           <AlertDialogAction
             onClick={(e) => validatePasskey(e)}
-            className="shad-primary-btn w-full"
-          >
+            className="shad-primary-btn w-full">
             Enter Admin Passkey
           </AlertDialogAction>
         </AlertDialogFooter>
