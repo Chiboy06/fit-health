@@ -30,7 +30,7 @@ const RegisterForm = ({ user, doctors }: { user: User; doctors: Doctor }) => {
   const router = useRouter();
   // console.log("doctors", doctors);
   const [isLoading, setIsLoading] = useState(false);
-  const docData = doctors?.documents?;
+  const docData = doctors?.documents;
   const Doctors = docData;
 
   const form = useForm<z.infer<typeof PatientFormValidation>>({
