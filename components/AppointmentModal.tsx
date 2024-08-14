@@ -41,9 +41,8 @@ export const AppointmentModal = ({
     }
     
     
-    return () => {
-      fetchDoctor();
-    }
+    fetchDoctor();
+    console.log("app,:", doctor);
   }, [])
   
   return (

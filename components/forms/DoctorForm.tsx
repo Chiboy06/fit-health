@@ -233,7 +233,7 @@ function DoctorForm() {
                       renderSkeleton={(field) => (
                         <FormControl>
                           <RadioGroup
-                            className="flex h-11 gap-6 xl:justify-between"
+                            className="flex flex-col gap-6 md:flex-row xl:justify-between"
                             onValueChange={field.onChange}
                             defaultValue={field.value}>
                             {GenderOptions.map((option, i) => (
@@ -273,18 +273,18 @@ function DoctorForm() {
                     ))}
                   </CustomFormField>
 
-                  <div className="flex w-full justify-end gap-4 font-semibold">
+                  <div className="flex w-full justify-end gap-4 px-1 font-semibold">
                     <SheetClose asChild>
                       <Button
                         type="button"
                         variant="ghost"
-                        className="px-4 text-white">
+                        className="px-2 text-white">
                         Cancel
                       </Button>
                     </SheetClose>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(2)}>
                       Next
                     </Button>
@@ -340,7 +340,7 @@ function DoctorForm() {
                       placeholder="(555) 123-4567"
                     />
                   </div>
-                  <div className="flex w-full justify-end gap-4 font-semibold">
+                  <div className="flex w-full justify-end gap-4 px-1 font-semibold">
                     <SheetClose asChild>
                       <Button
                         type="button"
@@ -351,13 +351,13 @@ function DoctorForm() {
                     </SheetClose>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(1)}>
                       Previous
                     </Button>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(3)}>
                       Next
                     </Button>
@@ -402,24 +402,24 @@ function DoctorForm() {
                     </div>
                   </section>
 
-                  <div className="flex w-full justify-end gap-4 py-4 font-semibold">
+                  <div className="flex w-full  justify-end gap-4 px-1 py-4 font-semibold">
                     <SheetClose asChild>
                       <Button
                         type="button"
                         variant="ghost"
-                        className="px-4 text-white">
+                        className="px-2 text-white">
                         Cancel
                       </Button>
                     </SheetClose>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(2)}>
                       Previous
                     </Button>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(4)}>
                       Next
                     </Button>
@@ -474,24 +474,24 @@ function DoctorForm() {
                       )}
                     />
                   </section>
-                  <div className="flex w-full justify-end gap-4 py-4 font-semibold">
+                  <div className="flex w-full justify-end gap-4 py-4 px-1 font-semibold">
                     <SheetClose asChild>
                       <Button
                         type="button"
                         variant="ghost"
-                        className="px-4 text-white">
+                        className="px-2 text-white">
                         Cancel
                       </Button>
                     </SheetClose>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(3)}>
                       Previous
                     </Button>
                     <Button
                       type="button"
-                      className="shad-primary-btn px-4"
+                      className="shad-primary-btn px-2"
                       onClick={() => setFormStep(5)}>
                       Next
                     </Button>
@@ -523,7 +523,7 @@ function DoctorForm() {
                     <Button
                       type="button"
                       variant="outline"
-                      className="px-4"
+                      className="px-2"
                       onClick={() => setFormStep(4)}>
                       Previous
                     </Button>

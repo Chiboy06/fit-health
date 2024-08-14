@@ -30,7 +30,7 @@ const RegisterForm = ({ user, doctors }: { user: User; doctors: Doctor }) => {
   const router = useRouter();
   // console.log("doctors", doctors);
   const [isLoading, setIsLoading] = useState(false);
-  const docData = doctors?.documents!;
+  const docData = doctors?.documents?;
   const Doctors = docData;
 
   const form = useForm<z.infer<typeof PatientFormValidation>>({
@@ -239,9 +239,9 @@ const RegisterForm = ({ user, doctors }: { user: User; doctors: Doctor }) => {
             name="primaryPhysician"
             label="Primary care physician"
             placeholder="Select a physician">
-            {Doctors.map((doctor, i) => (
+            {Doctors.map((doctor) => (
               <SelectItem
-                key={doctor.fullName + i}
+                key={doctor.fullName}
                 value={doctor.fullName}>
                 <div className="flex cursor-pointer items-center gap-2">
                   <Image
